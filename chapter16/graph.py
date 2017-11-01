@@ -11,7 +11,7 @@ def bfs(graph, start, end):
             if current == end:
                 print(path)
                 return (True, path)
-            # 两个顶点不相连，则跳过
+            # 兩個頂點若不相連則跳過
             if current not in graph:
                 continue
         visited = visited + graph[current]
@@ -28,7 +28,7 @@ def dfs(graph, start, end):
             if current == end:
                 print(path)
                 return (True, path)
-            # 两个顶点不相连，则跳过
+            # 兩個頂點若不相連則跳過
             if current not in graph:
                 continue
         visited = graph[current] + visited

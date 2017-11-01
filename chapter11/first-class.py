@@ -72,7 +72,4 @@ def main():
             pass
 
 if __name__ == '__main__':
-    '''
-    译注：这个程序会异常退出
-    '''
     main()

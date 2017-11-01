@@ -1,8 +1,8 @@
 # coding: utf-8
 
 import time
-SLOW = 3  # 单位为秒
-LIMIT = 5   # 字符数
+SLOW = 3    # 秒
+LIMIT = 5   # 字元數
 WARNING = 'too bad, you picked the slow algorithm :('
 
 
@@ -45,6 +45,7 @@ def main():
 
             strategy_picked = None
             strategies = {'1': allUniqueSet, '2': allUniqueSort}
+            
             while strategy_picked not in strategies.keys():
                 strategy_picked = input('Choose strategy: [1] Use a set, [2] Sort and pair> ')
 

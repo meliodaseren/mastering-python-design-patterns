@@ -91,7 +91,7 @@ class Boiler:
 class Fridge:
 
     def __init__(self):
-        self.temperature = 2  # 单位为摄氏度
+        self.temperature = 2  # 攝氏
 
     def __str__(self):
         return 'fridge temperature: {}'.format(self.temperature)
@@ -140,19 +140,19 @@ def main():
                      'fridge temperature': fridge.decrease_temperature}
 
     for t in tests:
-        if len(event.parseString(t)) == 2:  # 没有参数
+        if len(event.parseString(t)) == 2:        # 沒有參數
             cmd, dev = event.parseString(t)
             cmd_str, dev_str = ' '.join(cmd), ' '.join(dev)
             if 'open' in cmd_str or 'turn on' in cmd_str:
                 open_actions[dev_str]()
             elif 'close' in cmd_str or 'turn off' in cmd_str:
                 close_actions[dev_str]()
-        elif len(event.parseString(t)) == 3:  # 有参数
+        elif len(event.parseString(t)) == 3:       # 有參數
             cmd, dev, arg = event.parseString(t)
             cmd_str, dev_str, arg_str = ' '.join(cmd), ' '.join(dev), ' '.join(arg)
             num_arg = 0
             try:
-                num_arg = int(arg_str.split()[0])  # 抽取数值部分
+                num_arg = int(arg_str.split()[0])  # 抽取數值部分
             except ValueError as err:
                 print("expected number but got: '{}'".format(arg_str[0]))
             if 'increase' in cmd_str and num_arg > 0:

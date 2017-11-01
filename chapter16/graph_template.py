@@ -10,7 +10,7 @@ def traverse(graph, start, end, action):
             path.append(current)
             if current == end:
                 return (True, path)
-            # 两个顶点不相连，则跳过
+            # 兩個頂點若不相連則跳過
             if current not in graph:
                 continue
         visited = action(visited, graph[current])
