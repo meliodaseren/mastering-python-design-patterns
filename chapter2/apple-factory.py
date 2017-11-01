@@ -8,8 +8,8 @@ class AppleFactory:
     class MacMini14:
 
         def __init__(self):
-            self.memory = 4  # GB
-            self.hdd = 500   # GB
+            self.memory = 4    # GB
+            self.hdd = 500     # GB
             self.gpu = 'Intel HD Graphics 5000'
 
         def __str__(self):

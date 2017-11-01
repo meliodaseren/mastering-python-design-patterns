@@ -23,7 +23,7 @@ class Tree:
 
 def main():
     rnd = random.Random()
-    age_min, age_max = 1, 30    # 单位为年
+    age_min, age_max = 1, 30    # Year
     min_point, max_point = 0, 100
     tree_counter = 0
 

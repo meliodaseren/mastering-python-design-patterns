@@ -7,7 +7,7 @@ from collections import OrderedDict
 class Book:
 
     def __init__(self, name, authors, price, **rest):
-        '''rest的例子有：出版商，长度，标签，出版日期'''
+        # rest的例子有：出版商、長度、標籤、出版日期
         self.name = name
         self.authors = authors
         self.price = price      # 单位为美元

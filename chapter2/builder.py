@@ -7,7 +7,7 @@ PizzaProgress = Enum('PizzaProgress', 'queued preparation baking ready')
 PizzaDough = Enum('PizzaDough', 'thin thick')
 PizzaSauce = Enum('PizzaSauce', 'tomato creme_fraiche')
 PizzaTopping = Enum('PizzaTopping', 'mozzarella double_mozzarella bacon ham mushrooms red_onion oregano')
-STEP_DELAY = 3          # 秒
+STEP_DELAY = 3    # 秒
 
 
 class Pizza:
@@ -33,7 +33,7 @@ class MargaritaBuilder:
     def __init__(self):
         self.pizza = Pizza('margarita')
         self.progress = PizzaProgress.queued
-        self.baking_time = 5        # 秒
+        self.baking_time = 5    # 秒
 
     def prepare_dough(self):
         self.progress = PizzaProgress.preparation
@@ -65,7 +65,7 @@ class CreamyBaconBuilder:
     def __init__(self):
         self.pizza = Pizza('creamy bacon')
         self.progress = PizzaProgress.queued
-        self.baking_time = 7        # 秒
+        self.baking_time = 7    # 秒
 
     def prepare_dough(self):
         self.progress = PizzaProgress.preparation

@@ -28,7 +28,7 @@ class Test:
     @LazyProperty
     def resource(self):
         print('initializing self._resource which is: {}'.format(self._resource))
-        self._resource = tuple(range(5))    # 代价大的
+        self._resource = tuple(range(5))    # cost large
         return self._resource
 
 
@@ -36,7 +36,8 @@ def main():
     t = Test()
     print(t.x)
     print(t.y)
-    # 做更多的事情。。。
+
+    # more...
     print(t.resource)
     print(t.resource)
 

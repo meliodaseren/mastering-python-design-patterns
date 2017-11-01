@@ -8,7 +8,8 @@ class Frog:
 
     def interact_with(self, obstacle):
         print('{} the Frog encounters {} and {}!'.format(self,
-                                                         obstacle, obstacle.action()))
+                                                         obstacle,
+                                                         obstacle.action()))
 
 
 class Bug:

@@ -16,7 +16,7 @@ class SensitiveInfo:
 
 class Info:
 
-    '''SensitiveInfo的保护代理'''
+    # SensitiveInfo 保護代理
 
     def __init__(self):
         self.protected = SensitiveInfo()

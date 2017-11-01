@@ -39,22 +39,22 @@ class Server(metaclass=ABCMeta):
 class FileServer(Server):
 
     def __init__(self):
-        '''初始化文件服务进程要求的操作'''
+        # 初始化文件服務進程要求的操作
         self.name = 'FileServer'
         self.state = State.new
 
     def boot(self):
         print('booting the {}'.format(self))
-        '''启动文件服务进程要求的操作'''
+        # 啟動進程
         self.state = State.running
 
     def kill(self, restart=True):
         print('Killing {}'.format(self))
-        '''杀死文件服务进程要求的操作'''
+        # 殺死進程
         self.state = State.restart if restart else State.zombie
 
     def create_file(self, user, name, permissions):
-        '''检查访问权限的有效性、用户权限，等等'''
+        # 檢查訪問權限的有效性、用戶權限
 
         print("trying to create the file '{}' for user '{}' with permissions {}".format(name, user, permissions))
 
@@ -62,22 +62,22 @@ class FileServer(Server):
 class ProcessServer(Server):
 
     def __init__(self):
-        '''初始化进程服务进程要求的操作'''
+        # 初始化進程服務進程要求的操作
         self.name = 'ProcessServer'
         self.state = State.new
 
     def boot(self):
         print('booting the {}'.format(self))
-        '''启动进程服务进程要求的操作'''
+        # 啟動進程
         self.state = State.running
 
     def kill(self, restart=True):
         print('Killing {}'.format(self))
-        '''杀死进程服务进程要求的操作'''
+        # 殺死進程
         self.state = State.restart if restart else State.zombie
 
     def create_process(self, user, name):
-        '''检查用户权限、生成PID，等等'''
+        # 檢查用戶權限、生成PID
 
         print("trying to create the process '{}' for user '{}'".format(name, user))
 
@@ -92,8 +92,7 @@ class NetworkServer:
 
 class OperatingSystem:
 
-    '''外观'''
-
+    # 外觀
     def __init__(self):
         self.fs = FileServer()
         self.ps = ProcessServer()

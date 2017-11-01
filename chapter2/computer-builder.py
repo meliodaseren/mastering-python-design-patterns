@@ -5,8 +5,8 @@ class Computer:
 
     def __init__(self, serial_number):
         self.serial = serial_number
-        self.memory = None      # GB
-        self.hdd = None         # GB
+        self.memory = None    # GB
+        self.hdd = None       # GB
         self.gpu = None
 
     def __str__(self):
