@@ -1,5 +1,7 @@
 # Mastering Python Design Patterns
 
+https://github.com/cundi/Mastering.Python.Design.Patterns
+
 ## Python設計模式深入解析
 
 1. 工廠模式
